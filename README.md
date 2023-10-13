@@ -1,7 +1,7 @@
 <h1>cs50x</h1>
 <p>Coming Soon</p>
 <br>
-<h1>CS50P Final Project</h1>
+<h1>cs50P Final Project</h1>
 <h2>This is a simple Python script that will keep virtual meetings on track.</h2>
 <br>
 <p>
