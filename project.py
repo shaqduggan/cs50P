@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 
 """
 Run pip install -r requirements.txt in the command line terminal to install the necessary dependencies
-click Ctrl + c in the command line terminal to stop any loops if sys.exit() did not
+Click Ctrl + C in the command-line terminal to stop any processes in the terminal. if, for some reason, the infinite loop still continues after the meeting is launched or is unintended.
 """
 
 
@@ -41,7 +41,7 @@ def is_valid_time(t):
 
 
 while True:
-    VIRTUAL_MEETING_LINK = sys.argv[1]
+    VIRTUAL_MEETING_LINK = sys.argv[1] # Use command line to paste url link or hardcode it here
     if is_valid_url(VIRTUAL_MEETING_LINK):
         break
     else:
@@ -50,45 +50,38 @@ while True:
 
 
 def main():
-    if len(sys.argv) < 2:
-        sys.exit("Too few command-line arguments")
-    elif len(sys.argv) > 2:
-        sys.exit("Too many command-line arguments")
-    else:
-        try:
-            start = input("Enter m for meeting or l for lunch: ")
-            if is_valid_char(start):
-                if start == "l":
-                    try:
-                        lunch_minutes = int(input("Minutes: "))
-                        if 30 <= lunch_minutes <= 60:
-                            open_meeting_after_lunch(lunch_minutes)
-                        else:
-                            print("Try again with a number in range of 30 - 60")
-                            sys.exit()
-                    except ValueError:
-                        print("Not a valid number")
-                        sys.exit()
-                elif start == "m":
-                    scheduled_meeting_time = input("Enter Time (for example 19:02): ")
-                    if is_valid_time(scheduled_meeting_time):
-                        time_timer(scheduled_meeting_time)
+    print("Welcome to your virtual meeting scheduler. Please follow the prompts.")
+    try:
+        start = input("Enter m for meeting or l for lunch: ")
+        if is_valid_char(start):
+            if start == "l":
+                try:
+                    lunch_minutes = int(input("Minutes: "))
+                    if 30 <= lunch_minutes <= 60:
+                        open_meeting_after_lunch(lunch_minutes)
                     else:
-                        print("Time Format Error Try again in this format HH:MM")
+                        print("Try again with a number in range of 30 - 60")
                         sys.exit()
-            else:
-                print("Only Enter letter M or L to start python script : ")
+                except ValueError:
+                    print("Not a valid number")
+                    sys.exit()
+            elif start == "m":
+                scheduled_meeting_time = input("Enter Time (for example 19:02): ")
+                if is_valid_time(scheduled_meeting_time):
+                    time_timer(scheduled_meeting_time)
+                else:
+                    print("Time Format Error Try again in this format HH:MM")
+                    sys.exit()
+        else:
+            print("Only Enter letter M or L to start python script : ")
 
-        except ValueError:
-            print(
-                "Check if start is a proper letter character\nOnly enter a number value for minutes"
-            )
-            sys.exit()
+    except ValueError:
+        print(
+            "Check if start is a proper letter character\nOnly enter a number value for minutes"
+        )
+        sys.exit()
 
 
-# Browser Pop-Up Blockers: Be aware that some web browsers might block pop-ups,
-# which could prevent the virtual meeting link from opening.
-# On the first attempt you may need to adjust your browser settings for this to work correctly.
 def open_meeting():
     """
     This will open a link on the web browser, ideally for your virtual meetings.
@@ -138,7 +131,7 @@ def get_meeting(meeting_time):
         else:
             print("Don't work on a weekend silly")
     except TypeError:
-        print("Meeting has started... Test your Audio and Video")
+        print("Test your Audio and Video")
         return True
     else:
         return False
@@ -147,9 +140,6 @@ def get_meeting(meeting_time):
 def time_timer(meeting_time):
     """This function will run until the meeting time and then open the meeting link"""
 
-    # I am running an infinite loop until the meeting time is reached.This could be inefficient
-    # BUT the meeting time is sometime in an 8-hour workday not far in the future
-    # So I will continue with this approach
     cnt = 0
     while True:
         current_date_time = datetime.now()  # Output: 2023-10-13 11:09:49.274451
