@@ -1,7 +1,7 @@
 <h1>cs50x</h1>
 <p>Coming Soon</p>
 <br>
-<h1>cs50p Video Demo:</h1><url>https://www.youtube.com/watch?v=OI5n7S5u3Sw</url>
+<h1>cs50p Video Demo:</h1><url>https://youtu.be/GYUtGqeFLIQ</url>
 <p>
   This Python script is designed for users' efficiency, speed, and time management and serves the purpose of scheduling and launching virtual meetings.
   It leverages the capabilities of the schedule library to facilitate event scheduling. See https://pypi.org/project/schedule/.
@@ -22,7 +22,7 @@
   <li>IndexError: list index out of range</li>
   <li>python project.py "copy and paste valid url link here"</li>
   <li>Please provide a valid meeting link URL</li>
-  <li>python project.py "https://www.youtube.com/watch?v=OI5n7S5u3Sw"</li>
+  <li>python project.py "https://youtu.be/GYUtGqeFLIQ"</li>
   <li>Welcome to your virtual meeting scheduler. Please follow the prompts.</li>
   <li>Welcome to your virtual meeting scheduler. Please follow the prompts.</li>
   <li>Enter m for meeting or l for lunch:</li>
