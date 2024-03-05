@@ -1,4 +1,4 @@
-<h1>cs50 Video Demo:</h1><url>https://youtu.be/GYUtGqeFLIQ</url>
+<h1>Virtual meetings</h1>
 <p>
   This Python script is designed for users' efficiency, speed, and time management and serves the purpose of scheduling and launching virtual meetings.
   It leverages the capabilities of the schedule library to facilitate event scheduling. See https://pypi.org/project/schedule/.
