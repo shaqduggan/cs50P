@@ -13,14 +13,13 @@
   <li>Please be advised to adjust your Google Meet, Teams app, Zoom app, etc. to turn off video and set the mic to off when joining meetings.</li>
 </ol>
 <ul>
-  <li>git clone https://github.com/shaqduggan/cs50.git</li>
+  <li>git clone https://github.com/shaqduggan/virtual-meetings.git</li>
   <li>pip install -r requirements.txt</li>
   <li>python project.py</li>
   <li>IndexError: list index out of range</li>
-  <li>python project.py "copy and paste valid url link here"</li>
+  <li>python project.py "copy and paste url link here"</li>
   <li>Please provide a valid meeting link URL</li>
-  <li>python project.py "https://youtu.be/GYUtGqeFLIQ"</li>
-  <li>Welcome to your virtual meeting scheduler. Please follow the prompts.</li>
+  <li>python project.py "copy and paste VALID url link here"</li>
   <li>Welcome to your virtual meeting scheduler. Please follow the prompts.</li>
   <li>Enter m for meeting or l for lunch:</li>
 </ul>
